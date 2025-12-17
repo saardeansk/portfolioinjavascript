@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Portfolio</title>
+  <style>
+    :root {
+      --primary-orange: #f97316;
+      --light-orange: #fff4ec;
+      --dark-text: #1f2933;
+      --muted-text: #6b7280;
+      --border-color: #e5e7eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--dark-text);
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border-color);
+      padding: 24px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--primary-orange);
+    }
+
+    nav a {
+      margin-left: 32px;
+      text-decoration: none;
+      color: var(--muted-text);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary-orange);
+    }
+
+    .hero {
+      padding: 100px 80px 80px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 span {
+      color: var(--primary-orange);
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--muted-text);
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+
+    .hero button {
+      background-color: var(--primary-orange);
+      color: #ffffff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      opacity: 0.9;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    section {
+      padding: 80px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 15px;
+      color: var(--muted-text);
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .project-card {
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #ffffff;
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card div {
+      padding: 20px;
+    }
+
+    .project-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      color: var(--muted-text);
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      background-color: var(--light-orange);
+      border-radius: 16px;
+      padding: 60px;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .about p {
+      color: var(--muted-text);
+      font-size: 15px;
+      margin-top: 16px;
+    }
+
+    footer {
+      padding: 40px 80px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: var(--muted-text);
+    }
+
+    footer a {
+      margin-left: 24px;
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--muted-text);
+    }
+
+    footer a:hover {
+      color: var(--primary-orange);
+    }
+
+    @media (max-width: 1024px) {
+      header, section, footer {
+        padding: 40px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .projects {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        display: none;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SATHISHKUMAR</h1>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h2>Building <span>clean</span> & professional digital experiences</h2>
+        <p>
+          I am a creative professional specializing in modern, minimalist design and
+          thoughtful user experiences. This portfolio showcases selected work and
+          concepts.
+        </p>
+        <button>View My Work</button>
+      </div>
+      <img src="E:\Screenshot 2025-12-16 011927.jpg" alt="Hero Image" />
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-subtitle">
+        A curated selection of recent work demonstrating design clarity,
+        consistency, and attention to detail.
+      </p>
+
+      <div class="projects">
+        <div class="project-card">
+          <img src="E:\Screenshot 2025-12-16 011927.jpg" alt="Project 1" />
+          <div>
+            <h3>Project Title One</h3>
+            <p>Minimalist website design focused on clarity and usability.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="E:\Screenshot 2025-12-16 011927.jpg" alt="Project 2" />
+          <div>
+            <h3>Project Title Two</h3>
+            <p>Professional dashboard interface with clean data visualization.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="E:\Screenshot 2025-12-16 011927.jpg" alt="Project 3" />
+          <div>
+            <h3>Project Title Three</h3>
+            <p>Brand-focused landing page with strong visual hierarchy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <img src="E:\Screenshot 2025-12-16 011927.jpg" alt="About Image" />
+        <div>
+          <h2 class="section-title">About Me</h2>
+          <p>
+            I am a detail-oriented designer and developer with a passion for
+            simplicity and functional aesthetics. My approach balances visual
+            elegance with practical usability to deliver professional results.
+          </p>
+          <p>
+            This portfolio uses a restrained white and orange color palette to
+            emphasize clarity, confidence, and modernity.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>© 2025 YourName. All rights reserved.</p>
+    <div>
+      <a href="www.linkedin.com/in/sathish-s-ba9617381">LinkedIn</a>
+      <a href="https://github.com/saardeansk">Gitup</a>
+      <a href="sathishkumarsk2210@gmail.com">Email</a>
+    </div>
+  </footer>
+
+</body>
+</html>
